@@ -121,7 +121,8 @@
         "label": "AHK",
         "enableBreakpointsFor": {
           "languageIds": [
-            "ahk"
+            "ahk",
+            "php"
           ]
         },
         "program": "./out/phpDebug.js",
@@ -237,10 +238,10 @@
         },
         "initialConfigurations": [
           {
-            "name": "Listen for AHK Debug (XDebug port 9900)",
+            "name": "Listen for AHK Debug (XDebug port 9000)",
             "type": "php",
             "request": "launch",
-            "port": 9900
+            "port": 9000
           },
           {
             "name": "Launch AHK with debugging",
@@ -248,7 +249,7 @@
             "request": "launch",
             "program": "${file}",
             "cwd": "${fileDirname}",
-            "port": 9900
+            "port": 9000
           }
         ]
       }

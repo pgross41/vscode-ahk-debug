@@ -11,6 +11,7 @@ import * as fs from 'fs'
 import { Terminal } from './terminal'
 import { isSameUri, convertClientPathToDebugger, convertDebuggerPathToClient } from './paths'
 import minimatch = require('minimatch')
+import { DOMParser } from 'xmldom'
 
 if (process.env['VSCODE_NLS_CONFIG']) {
     try {
@@ -749,8 +750,17 @@ class PhpDebugSession extends vscode.DebugSession {
                 if (!stackFrame) {
                     throw new Error(`Unknown frameId ${args.frameId}`)
                 }
-                const contexts = await stackFrame.getContexts()
-                scopes = contexts.map(context => {
+                // AHK doesn't support context_names so if it fails, default to 0:local and 1:global
+                var contexts
+                try {
+                    contexts = await stackFrame.getContexts()
+                } catch (error){
+                    const document = (new DOMParser()).parseFromString('<response><context name="Locals" id="0"></context><context name="Globals" id="1"></context></response>', "application/xml")
+                    contexts = Array.from(document.documentElement.childNodes).map(
+                        (contextNode: Element) => new xdebug.Context(contextNode, stackFrame)
+                    )
+                }
+                scopes = contexts.map(context => { 
                     const variableId = this._variableIdCounter++
                     // remember that this new variable ID is assigned to a SCOPE (in XDebug "context"), not a variable (in XDebug "property"),
                     // so when VS Code does a variablesRequest with that ID we do a context_get and not a property_get

@@ -11,10 +11,11 @@
       "log": true,
     },
     {
-      "name": "Launch",
-      "debugServer": 4711, // Uncomment for debugging the adapter
+      "name": "Launch PHP",
       "request": "launch",
       "type": "php",
+      "debugServer": 4711, // Uncomment for debugging the adapter
+      "stopOnEntry": true,
       "port": 9000,
       "program": "${file}",
       "cwd": "${workspaceRoot}",
@@ -23,16 +24,16 @@
     {
       "name": "Launch AHK",
       "request": "launch",
+      "type": "php",
       "debugServer": 4711, // Uncomment for debugging the adapter
       "stopOnEntry": false,
-      "type": "php",
       "program": "${file}",
       "runtimeExecutable": "C:/Program Files/AutoHotkey/AutoHotkey.exe",
       "runtimeArgs": ["/debug=localhost:9000"],
       "port": 9000, // This must match the one in runtimeArgs
       "cwd": "${fileDirname}",
       "log": false,
-      "externalConsole": true
+      "externalConsole": false
     }
   ]
 }
