@@ -1,10 +1,9 @@
-PHP Debug Adapter for Visual Studio Code
+AHK Debug Adapter for Visual Studio Code
 ========================================
 
-[![vs marketplace](https://img.shields.io/vscode-marketplace/v/felixfbecker.php-debug.svg?label=vs%20marketplace)](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug) [![downloads](https://img.shields.io/vscode-marketplace/d/felixfbecker.php-debug.svg)](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug) [![rating](https://img.shields.io/vscode-marketplace/r/felixfbecker.php-debug.svg)](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug) [![windows build](https://img.shields.io/appveyor/ci/felixfbecker/vscode-php-debug/master.svg?label=windows+build)](https://ci.appveyor.com/project/felixfbecker/vscode-php-debug)
-[![macos/linux build](https://img.shields.io/travis/felixfbecker/vscode-php-debug/master.svg?label=macos/linux+build)](https://travis-ci.org/felixfbecker/vscode-php-debug) [![codecov](https://codecov.io/gh/felixfbecker/vscode-php-debug/branch/master/graph/badge.svg)](https://codecov.io/gh/felixfbecker/vscode-php-debug) [![dependencies](https://gemnasium.com/felixfbecker/vscode-php-debug.svg)](https://gemnasium.com/felixfbecker/vscode-php-debug) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![chat: on gitter](https://badges.gitter.im/felixfbecker/vscode-php-debug.svg)](https://gitter.im/felixfbecker/vscode-php-debug?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+Readme coming soon
 
-![Demo GIF](images/demo.gif)
+<!-- ![Demo GIF](images/demo.gif)
 
 Installation
 ------------
@@ -115,4 +114,4 @@ VS Code will open an "Extension Development Host" with the debug adapter running
 
 The extension is written in TypeScript and compiled using a Gulpfile that first transpiles to ES6 and then uses Babel to specifically target VS Code's Node version. You can run the compile task through `npm run compile`, `gulp compile` or from VS Code with `Ctrl`+`Shift`+`B`. `npm run watch` / `gulp watch` enables incremental compilation.
 
-Tests are written with Mocha and can be run with `npm test`. The tests are run in CI on Linux and Windows against PHP 5.4, 5.6, 7.0 and XDebug 2.3, 2.4.
+Tests are written with Mocha and can be run with `npm test`. The tests are run in CI on Linux and Windows against PHP 5.4, 5.6, 7.0 and XDebug 2.3, 2.4. -->
